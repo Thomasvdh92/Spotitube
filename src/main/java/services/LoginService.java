@@ -1,12 +1,9 @@
 package services;
 
-import com.fasterxml.jackson.core.json.JsonReadContext;
 import datasource.ITokenDAO;
-import datasource.IUserDAO;
-import datasource.MySQL.MySQLUserDAO;
+import datasource.IOwnerDAO;
+import domain.Owner;
 import domain.Token;
-import domain.User;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.json.JSONObject;
 
 import javax.inject.Inject;
@@ -22,7 +19,7 @@ import java.util.Random;
 public class LoginService {
 
     @Inject
-    private IUserDAO userDAO;
+    private IOwnerDAO OwnerDAO;
 
     @Inject
     private ITokenDAO tokenDAO;
@@ -31,11 +28,11 @@ public class LoginService {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(String body) {
+        System.out.println(body);
         JSONObject json = new JSONObject(body);
-        String user = json.getString("user");
+        String Owner = json.getString("user");
         String password = json.getString("password");
-
-        if (authenticate(user, password)) {
+        if (authenticate(Owner, password)) {
             Random rand = new Random();
             StringBuilder tokenString = new StringBuilder();
             for (int i = 1; i < 15; i++) {
@@ -45,7 +42,7 @@ public class LoginService {
                     tokenString.append(n);
                 }
             }
-            Token token = new Token(tokenString.toString(), user);
+            Token token = new Token(tokenString.toString(), Owner);
             tokenDAO.insert(token);
             return Response.ok(token).build();
         } else {
@@ -53,12 +50,10 @@ public class LoginService {
         }
     }
 
-    public boolean authenticate(String username, String password) {
-
-
-        User user = userDAO.read(username);
-        if (user != null) {
-            if (user.getPassword().equals(password)) {
+    public Boolean authenticate(String Ownername, String password) {
+        Owner owner = OwnerDAO.read(Ownername);
+        if (owner != null) {
+            if (owner.getPassword().equals(password)) {
                 System.out.println("AUTHENTICATED");
                 return true;
             }

@@ -24,6 +24,16 @@ public class Track {
         this.offlineAvailable = offlineAvailable;
     }
 
+    public Track() {}
+
+    public Track(int trackid, String title, String performer, int duration, Boolean offline) {
+        this.id = trackid;
+        this.title = title;
+        this.performer = performer;
+        this.duration = duration;
+        this.offlineAvailable = offline;
+    }
+
     public int getId() {
         return id;
     }

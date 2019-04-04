@@ -3,6 +3,7 @@ package datasource.MySQL;
 import datasource.IConnection;
 import datasource.ITrackDAO;
 import domain.Track;
+import domain.Tracks;
 
 import javax.inject.Inject;
 import java.sql.Connection;
@@ -17,7 +18,7 @@ public class MySQLTrackDAO implements ITrackDAO {
     private IConnection connection;
 
     @Override
-    public List<Track> tracksForPlaylist(int forPlaylist) {
+    public Tracks tracksForPlaylist(int forPlaylist) {
         Connection conn = connection.getConnection();
 
         try {
@@ -31,10 +32,7 @@ public class MySQLTrackDAO implements ITrackDAO {
                 tracks.add(t);
             }
             conn.close();
-            for(Track t : tracks) {
-                System.out.println(t.getTitle());
-            }
-            return tracks;
+            return new Tracks(tracks);
         } catch (SQLException e) {
             e.printStackTrace();
         }

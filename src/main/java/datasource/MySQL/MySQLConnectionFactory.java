@@ -23,7 +23,7 @@ public class MySQLConnectionFactory implements IMySQLConnection {
 
     @Override
     public Connection getConnection() {
-        Connection conn = null;
+        Connection conn;
         try{
             conn = DriverManager.getConnection(prop.getProperty("jdbc.url"));
         }catch (SQLException e){

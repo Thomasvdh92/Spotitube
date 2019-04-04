@@ -6,14 +6,22 @@ public class Playlist {
 
     private int id;
     private String name;
-    private User user;
+    private boolean owner;
     private List<Track> tracks;
+    private Owner ownerName;
 
-    public Playlist(int id, String name, User user, List<Track> tracks) {
+    public Playlist(int id, String name, Owner ownerName, List<Track> tracks) {
         this.id = id;
         this.name = name;
-        this.user = user;
+        this.ownerName = ownerName;
         this.tracks = tracks;
+    }
+
+    public Playlist(int id, String name, boolean owner, List<Track> tracks) {
+        this.id = id;
+        this.name = name;
+        this.tracks = tracks;
+        this.owner = owner;
     }
 
     public int getLength() {
@@ -34,11 +42,15 @@ public class Playlist {
         return name;
     }
 
-    public User getUser() {
-        return user;
-    }
-
     public List<Track> getTracks() {
         return tracks;
+    }
+
+    public boolean isOwner() {
+        return owner;
+    }
+
+    public Owner getOwnerName() {
+        return ownerName;
     }
 }

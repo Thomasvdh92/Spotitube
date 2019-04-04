@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface IPlaylistDAO {
 
-    List<Playlist> getAllPlaylists();
+    List<Playlist> getAllPlaylists(String token);
 
-    void add(Playlist playlist);
+    void add(Playlist playlist, String token);
 
     void delete(int id);
 
@@ -17,7 +17,7 @@ public interface IPlaylistDAO {
 
     void removeTrackFromPlaylist(Integer id, Integer trackid);
 
-    void addTrackToPlaylist(Playlist playlist, Track track);
+    void addTrackToPlaylist(int playlistid, Track track);
 
 //    List<Playlist> findByOwner(String owner);
 //

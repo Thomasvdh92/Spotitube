@@ -3,10 +3,10 @@ package datasource.MySQL;
 import datasource.IConnection;
 import datasource.IPlaylistDAO;
 import datasource.ITrackDAO;
-import datasource.IUserDAO;
+import datasource.IOwnerDAO;
 import domain.Playlist;
 import domain.Track;
-import domain.User;
+import domain.Owner;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
@@ -27,10 +27,10 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     private ITrackDAO trackDAO;
 
     @Inject
-    private IUserDAO userDAO;
+    private IOwnerDAO ownerDAO;
 
     @Override
-    public List<Playlist> getAllPlaylists() {
+    public List<Playlist> getAllPlaylists(String token) {
         List<Playlist> playlists = new ArrayList<>();
         try {
             Connection conn = connection.getConnection();
@@ -38,9 +38,13 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             PreparedStatement stmt = conn.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
-                User u = userDAO.read(rs.getInt(3));
                 List<Track> tracks = trackDAO.tracksByPlaylistId(rs.getInt(1));
-                Playlist playlist = new Playlist(rs.getInt(1), rs.getString(2), u, tracks);
+                boolean isOwner = false;
+                Owner currentOwner = ownerDAO.getOwnerByTokenString(token);
+                if(currentOwner.getId() == rs.getInt(3)) {
+                    isOwner = true;
+                }
+                Playlist playlist = new Playlist(rs.getInt(1), rs.getString(2), isOwner, tracks);
                 playlists.add(playlist);
             }
             conn.close();
@@ -53,13 +57,15 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     }
 
     @Override
-    public void add(Playlist playlist) {
+    public void add(Playlist playlist, String token) {
         try {
+            System.out.println(playlist);
             Connection conn = connection.getConnection();
-            String query = "INSERT INTO Playlist (Name, User) VALUES (?, ?)";
+            String query = "INSERT INTO Playlist (Name, Owner) VALUES (?, ?)";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, playlist.getName());
-            stmt.setInt(2, 1);
+            Owner owner = ownerDAO.getOwnerByTokenString(token);
+            stmt.setInt(2, owner.getId());
             stmt.executeUpdate();
             conn.close();
         } catch (SQLException e) {
@@ -112,15 +118,14 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     }
 
     @Override
-    public void addTrackToPlaylist(Playlist playlist, Track track) {
+    public void addTrackToPlaylist(int playlistid, Track track) {
         try {
             Connection conn = connection.getConnection();
             String query = "INSERT INTO Playlist_Track(trackid, playlistid) VALUES (?, ?)";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setInt(1, track.getId());
-            stmt.setInt(2, playlist.getId());
+            stmt.setInt(2, playlistid);
             stmt.executeUpdate();
-            playlist.getTracks().add(track);
         } catch (SQLException e) {
             e.printStackTrace();
         }

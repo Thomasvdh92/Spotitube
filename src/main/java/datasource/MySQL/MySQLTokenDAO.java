@@ -1,7 +1,9 @@
 package datasource.MySQL;
 
 import datasource.IConnection;
+import datasource.IOwnerDAO;
 import datasource.ITokenDAO;
+import domain.Owner;
 import domain.Token;
 
 import javax.inject.Inject;
@@ -16,11 +18,14 @@ public class MySQLTokenDAO implements ITokenDAO {
     @Inject
     private IConnection connection;
 
+    @Inject
+    private IOwnerDAO ownerDAO;
+
     @Override
     public Token read(String tokenString) {
         try {
             Connection conn = connection.getConnection();
-            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Token_User WHERE Token = ?");
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Token_Owner WHERE Token = ?");
             stmt.setString(1, tokenString);
             ResultSet rs = stmt.executeQuery();
             Token t = null;
@@ -38,8 +43,9 @@ public class MySQLTokenDAO implements ITokenDAO {
     @Override
     public void insert(Token token) {
         try {
+            System.out.println("Inserting token...");
             Connection conn = connection.getConnection();
-            PreparedStatement stmt = conn.prepareStatement("INSERT INTO Token_User(Token, User) VALUES(?, ?)");
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO Token_Owner(Token, Owner) VALUES(?, ?)");
             stmt.setString(1, token.getToken());
             stmt.setString(2, token.getUser());
             stmt.execute();
