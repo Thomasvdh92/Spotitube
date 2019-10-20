@@ -1,9 +1,8 @@
 package domain;
 
-import javax.enterprise.inject.Model;
+
 import java.util.List;
 
-@Model
 public class Tracks {
     List<Track> tracks;
 
@@ -11,9 +10,11 @@ public class Tracks {
         this.tracks = tracks;
     }
 
-    public Tracks() {}
-
     public List<Track> getTracks() {
         return tracks;
+    }
+
+    public void setTracks(List<Track> tracks) {
+        this.tracks = tracks;
     }
 }

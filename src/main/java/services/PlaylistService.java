@@ -1,7 +1,6 @@
 package services;
 
 import datasource.IPlaylistDAO;
-import datasource.ITokenDAO;
 import datasource.ITrackDAO;
 import datasource.IOwnerDAO;
 import domain.*;
@@ -21,9 +20,6 @@ public class PlaylistService {
 
     @Inject
     private ITrackDAO trackDAO;
-
-    @Inject
-    private ITokenDAO tokenDAO;
 
     @Inject
     private IOwnerDAO OwnerDAO;
@@ -86,21 +82,16 @@ public class PlaylistService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response addTrackToPlaylist(@PathParam("id") Integer id, String body, @QueryParam("token") String token) {
-        System.out.println(body);
         JSONObject json = new JSONObject(body);
         int trackid = json.getInt("id");
         String title = json.getString("title");
         String performer = json.getString("performer");
         int duration = json.getInt("duration");
-//        String album = json.getString("album");
-//        int playcount = json.getInt("playcount");
-//        String description = json.getString("description");
-//        String publicationDate = json.getString("publicationDate");
         Boolean offline = json.getBoolean("offlineAvailable");
 
         Track track = new Track(trackid, title, performer, duration, offline);
 
-        playlistDAO.addTrackToPlaylist(id, track);
+        playlistDAO.addTrackToPlaylist(id, track, offline);
         return getPlaylists(token);
 
     }

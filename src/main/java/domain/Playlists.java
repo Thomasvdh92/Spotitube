@@ -9,12 +9,13 @@ public class Playlists {
 
     public Playlists(List<Playlist> playlists) {
         this.playlists = playlists;
-        calculateLength();
     }
+
+    public Playlists(){}
 
     public void calculateLength() {
         for(Playlist p : playlists) {
-            length += p.getLength();
+            this.length += p.getLength();
         }
     }
 
@@ -22,6 +23,10 @@ public class Playlists {
         return this.playlists;
     }
 
+    /**
+     * Method used to obtain the total duration of all playlists
+     * @return
+     */
     public int getLength() {
         return this.length;
     }

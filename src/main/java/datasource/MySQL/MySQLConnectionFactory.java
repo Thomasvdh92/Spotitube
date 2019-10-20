@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.Properties;
 
 @Default
@@ -14,7 +15,7 @@ public class MySQLConnectionFactory implements IMySQLConnection {
 
     static{
         try {
-            prop.load(MySQLConnectionFactory.class.getClassLoader().getResourceAsStream("dbproperties.properties"));
+            prop.load(Objects.requireNonNull(MySQLConnectionFactory.class.getClassLoader().getResourceAsStream("dbproperties.properties")));
             Class.forName(prop.getProperty("jdbc.driver"));
         }catch (ClassNotFoundException | IOException e){
             e.printStackTrace();

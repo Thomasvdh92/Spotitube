@@ -3,53 +3,59 @@ package datasource.MySQL;
 import datasource.H2Connector;
 import datasource.IOwnerDAO;
 import domain.Owner;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.io.FileNotFoundException;
 import java.sql.Connection;
-import java.sql.SQLException;
-
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestOwnerDAO {
 
-    IOwnerDAO OwnerDAO;
+    @Mock
+    private Connection connection;
 
-    Connection connection;
+    @Mock
+    private IMySQLConnection conn;
 
-    @InjectMocks MySQLConnectionFactory conn;
+    @InjectMocks
+    private IOwnerDAO OwnerDAO = new MySQLOwnerDAO();;
 
-    H2Connector h2 = new H2Connector();
+    private H2Connector h2 = new H2Connector();
 
     @Before
-    public void setUp() {
-        OwnerDAO = new MySQLOwnerDAO();
+    public void setUp() throws FileNotFoundException {
         connection = h2.getH2Connection();
-        conn = mock(MySQLConnectionFactory.class);
         when(conn.getConnection()).thenReturn(connection);
-        h2.createUserTableAndAddUser(connection);
-    }
-
-    @After
-    public void tearDown() {
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        h2.runSqlScript(connection);
     }
 
     @Test
-    public void test() {
-        Owner u = OwnerDAO.read("Ownername");
-        System.out.println(u.getUsername());
-        System.out.println(u.getPassword());
-        assert u.getPassword() == "";
+    public void testReadUsername() {
+        Owner owner = OwnerDAO.read("user");
+        assert owner.getUsername().equals("user");
+        assert owner.getPassword().equals("password");
+        assert OwnerDAO.read("") == null;
+    }
+
+    @Test
+    public void testReadId() {
+        Owner owner = OwnerDAO.read(1);
+        assert owner.getUsername().equals("user");
+        assert owner.getPassword().equals("password");
+        assert OwnerDAO.read(2) == null;
+    }
+
+    @Test
+    public void testGetUserByToken() {
+        Owner owner = OwnerDAO.getOwnerByTokenString("1234-1234-1234");
+        assert owner.getUsername().equals("user");
+        assert owner.getPassword().equals("password");
+        assert OwnerDAO.getOwnerByTokenString("") == null;
     }
 }

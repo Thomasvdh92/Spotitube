@@ -109,7 +109,7 @@ public class TestPlaylistService {
                 "  \"description\": undefined,\n" +
                 "  \"offlineAvailable\": false\n" +
                 "}";
-        Mockito.doNothing().when(playlistDAO).addTrackToPlaylist(1, t);
+        Mockito.doNothing().when(playlistDAO).addTrackToPlaylist(1, t, true);
         Response r = playlistService.addTrackToPlaylist(1, body, token.getToken());
         assert r.getStatus() == 200;
     }

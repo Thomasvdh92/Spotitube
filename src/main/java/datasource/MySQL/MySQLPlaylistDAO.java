@@ -34,7 +34,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
         List<Playlist> playlists = new ArrayList<>();
         try {
             Connection conn = connection.getConnection();
-            String query = "SELECT * FROM Playlist p";
+            String query = "SELECT * FROM Playlist";
             PreparedStatement stmt = conn.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
@@ -59,7 +59,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     @Override
     public void add(Playlist playlist, String token) {
         try {
-            System.out.println(playlist);
             Connection conn = connection.getConnection();
             String query = "INSERT INTO Playlist (Name, Owner) VALUES (?, ?)";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -81,7 +80,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.setInt(1, id);
             stmt.executeUpdate();
             conn.close();
-            System.out.println("Playlist {id} deleted!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -96,7 +94,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.setInt(2, playlist.getId());
             stmt.executeUpdate();
             conn.close();
-            System.out.println("Playlist {playlist.getId()} updated!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -118,11 +115,17 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     }
 
     @Override
-    public void addTrackToPlaylist(int playlistid, Track track) {
+    public void addTrackToPlaylist(int playlistid, Track track, Boolean offlineAvailable) {
         try {
             Connection conn = connection.getConnection();
-            String query = "INSERT INTO Playlist_Track(trackid, playlistid) VALUES (?, ?)";
+            int bool = (offlineAvailable) ? 1 : 0;
+            String query = "UPDATE Track SET offlineAvailable = ? WHERE TrackID = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setInt(1, bool);
+            stmt.setInt(2, track.getId());
+            stmt.executeUpdate();
+            query = "INSERT INTO Playlist_Track(trackid, playlistid) VALUES (?, ?)";
+            stmt = conn.prepareStatement(query);
             stmt.setInt(1, track.getId());
             stmt.setInt(2, playlistid);
             stmt.executeUpdate();

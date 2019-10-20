@@ -1,13 +1,10 @@
 package datasource.MySQL;
 
 import datasource.IConnection;
-import datasource.IOwnerDAO;
 import datasource.ITokenDAO;
-import domain.Owner;
 import domain.Token;
 
 import javax.inject.Inject;
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,9 +14,6 @@ public class MySQLTokenDAO implements ITokenDAO {
 
     @Inject
     private IConnection connection;
-
-    @Inject
-    private IOwnerDAO ownerDAO;
 
     @Override
     public Token read(String tokenString) {
@@ -43,13 +37,11 @@ public class MySQLTokenDAO implements ITokenDAO {
     @Override
     public void insert(Token token) {
         try {
-            System.out.println("Inserting token...");
             Connection conn = connection.getConnection();
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Token_Owner(Token, Owner) VALUES(?, ?)");
             stmt.setString(1, token.getToken());
             stmt.setString(2, token.getUser());
             stmt.execute();
-            conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

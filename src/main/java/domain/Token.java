@@ -10,12 +10,22 @@ public class Token {
         this.user = user;
     }
 
+    public Token(){}
+
     public String getToken() {
         return token;
     }
 
     public String getUser() {
         return user;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     @Override

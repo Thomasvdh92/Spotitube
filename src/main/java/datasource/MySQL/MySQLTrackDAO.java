@@ -1,6 +1,5 @@
 package datasource.MySQL;
 
-import datasource.IConnection;
 import datasource.ITrackDAO;
 import domain.Track;
 import domain.Tracks;
@@ -13,9 +12,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySQLTrackDAO implements ITrackDAO {
+public class MySQLTrackDAO extends SQLException implements ITrackDAO  {
+
     @Inject
-    private IConnection connection;
+    private IMySQLConnection connection;
 
     @Override
     public Tracks tracksForPlaylist(int forPlaylist) {

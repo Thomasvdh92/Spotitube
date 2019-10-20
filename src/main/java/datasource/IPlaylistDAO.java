@@ -17,15 +17,5 @@ public interface IPlaylistDAO {
 
     void removeTrackFromPlaylist(Integer id, Integer trackid);
 
-    void addTrackToPlaylist(int playlistid, Track track);
-
-//    List<Playlist> findByOwner(String owner);
-//
-//    Playlist findById(int id);
-//
-//    void save(Playlist playlist);
-//
-//    void delete(int playlistId);
-//
-//    void add(Playlist playlist);
+    void addTrackToPlaylist(int playlistid, Track track, Boolean OfflineAvailable);
 }

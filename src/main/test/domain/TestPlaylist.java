@@ -25,6 +25,7 @@ public class TestPlaylist {
         list.add(p);
         playlists = new Playlists(list);
         assert playlists.getPlaylists() == list;
+        playlists.calculateLength();
         assert playlists.getLength() == 100;
     }
 }

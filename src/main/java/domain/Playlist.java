@@ -53,4 +53,24 @@ public class Playlist {
     public Owner getOwnerName() {
         return ownerName;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOwner(boolean owner) {
+        this.owner = owner;
+    }
+
+    public void setTracks(List<Track> tracks) {
+        this.tracks = tracks;
+    }
+
+    public void setOwnerName(Owner ownerName) {
+        this.ownerName = ownerName;
+    }
 }

@@ -69,4 +69,40 @@ public class Track {
     public Boolean getOfflineAvailable() {
         return offlineAvailable;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPerformer(String performer) {
+        this.performer = performer;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    public void setPlaycount(int playcount) {
+        this.playcount = playcount;
+    }
+
+    public void setPublicationDate(String publicationDate) {
+        this.publicationDate = publicationDate;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setOfflineAvailable(Boolean offlineAvailable) {
+        this.offlineAvailable = offlineAvailable;
+    }
 }

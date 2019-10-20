@@ -13,6 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.sql.SQLException;
 import java.util.Random;
 
 @Path("/login")
@@ -27,14 +28,16 @@ public class LoginService {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(String body) {
-        System.out.println(body);
+    public Response login(String body) throws SQLException {
+
+        // Read the values from ther json object
         JSONObject json = new JSONObject(body);
         String Owner = json.getString("user");
         String password = json.getString("password");
         if (authenticate(Owner, password)) {
             Random rand = new Random();
             StringBuilder tokenString = new StringBuilder();
+            // Generate a random string used for the token
             for (int i = 1; i < 15; i++) {
                 if(i%5==0) tokenString.append("-");
                 else {
@@ -51,14 +54,14 @@ public class LoginService {
     }
 
     public Boolean authenticate(String Ownername, String password) {
+        // Check if the user exists in the database
         Owner owner = OwnerDAO.read(Ownername);
         if (owner != null) {
+            // Check if the password is correct
             if (owner.getPassword().equals(password)) {
-                System.out.println("AUTHENTICATED");
                 return true;
             }
         }
-        System.out.println("NOT AUTHENTICATED");
         return false;
     }
 

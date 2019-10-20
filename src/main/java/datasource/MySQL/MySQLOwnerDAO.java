@@ -17,15 +17,13 @@ public class MySQLOwnerDAO implements IOwnerDAO {
     private IMySQLConnection connection;
 
     @Override
-    public Owner read(String Ownername) {
+    public Owner read(String Username) {
         try {
             Connection conn = connection.getConnection();
             String query = "SELECT * FROM Owner WHERE Username = ?";
-            System.out.println(query);
             PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setString(1, Ownername);
+            stmt.setString(1, Username);
             return getOwner(conn, stmt);
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
