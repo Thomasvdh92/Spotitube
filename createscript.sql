@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS spotitube;
+DROP SCHEMA IF EXISTS spotitube;
 
 DROP TABLE if exists OWNER;
 

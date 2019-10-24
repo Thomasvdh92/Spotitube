@@ -30,7 +30,7 @@ public class LoginService {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(String body) throws SQLException {
 
-        // Read the values from ther json object
+        // Read the values from the json object
         JSONObject json = new JSONObject(body);
         String Owner = json.getString("user");
         String password = json.getString("password");

@@ -10,12 +10,20 @@ public class TestPlaylist {
     private Track t = new Track(1, "title", "performer", 100, "album", 100, "12-12-1992", "track", true);
     private ArrayList<Track> tracks = new ArrayList<>();
     private Playlist p;
-    private Playlists playlists;
+    private Playlists playlists = new Playlists();
 
     @Test
     public void TestPlaylist() {
         tracks.add(t);
+        p = new Playlist();
+        p = new Playlist(1, "playlist", true, tracks);
         p = new Playlist(1, "playlist", u, tracks);
+        p.setId(1);
+        p.setName("playlist");
+        p.setOwnerName(u);
+        p.setOwner(true);
+        p.setTracks(tracks);
+        assert p.isOwner();
         assert p.getId() == 1;
         assert p.getName().equals("playlist");
         assert p.getOwnerName() == u;

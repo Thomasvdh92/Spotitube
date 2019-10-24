@@ -8,8 +8,14 @@ public class TestOwner {
 
     @Test
     public void testConstructor() {
-        owner = new Owner("tester", "newpass");
-        assert owner.getPassword() == "newpass";
+        owner = new Owner();
+        owner = new Owner(1,"tester", "newpass");
+        assert owner.getPassword().equals("newpass");
         assert owner.getUsername().equals("tester");
+        owner.setUsername("test123");
+        owner.setPassword("test123");
+        assert owner.getPassword().equals("test123");
+        assert owner.getUsername().equals("test123");
+        assert owner.getId() == 1;
     }
 }

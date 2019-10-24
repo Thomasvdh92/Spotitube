@@ -7,80 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ad5980-c076-413a-9baf-7d9a5c1b29b4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestPlaylistDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestTrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestMySQLConnectionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotitube.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/createscript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createscript.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/IOwnerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ITokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/ITokenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Owner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Playlists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Playlists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Tracks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/RequestFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbproperties.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/datasource/H2Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/datasource/H2Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestPlaylistDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestTrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestTrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestOwner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/services/TestLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/services/TestLoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/ITokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/ITokenDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLConnectionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLOwnerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLOwnerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/META-INF/Spotitube.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/META-INF/Spotitube.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTokenDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTrackDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/dbproperties.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Owner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Track.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Tracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Tracks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Spotitube.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/IPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/IPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/ITokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/ITokenDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLConnectionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLOwnerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLOwnerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/middleware/RequestFilter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTokenDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTrackDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbproperties.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Owner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Playlists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Track.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Tracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Tracks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Spotitube.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/middleware/RequestFilter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/datasource/H2Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/datasource/H2Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/datasource/MySQL/TestOwnerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/datasource/MySQL/TestOwnerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/datasource/MySQL/TestPlaylistDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestOwner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestPlaylist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestPlaylist.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestTrack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestTrack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/services/TestLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/TestLoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/services/TestPlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/TestPlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/services/TestTrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/TestTrackService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +80,7 @@
     <option name="myAddOrReplace" value="0" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="151" />
+    <option name="myElementSize" value="100" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -236,7 +188,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlaylistDAO.testGetAllPlaylists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMySQLConnectionFactory.testConnction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datasource.MySQL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="datasource.MySQL" />
+      <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestMySQLConnectionFactory" />
+      <option name="METHOD_NAME" value="testConnction" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMySQLConnectionFactory.testGetConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datasource.MySQL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="datasource.MySQL" />
+      <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestMySQLConnectionFactory" />
+      <option name="METHOD_NAME" value="testGetConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOwner.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.TestOwner" />
+      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlaylistDAO.testAddPlaylists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spotitube" />
       <extension name="coverage">
         <pattern>
@@ -246,57 +249,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="datasource.MySQL" />
       <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestPlaylistDAO" />
-      <option name="METHOD_NAME" value="testGetAllPlaylists" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTokenDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="datasource.MySQL.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="datasource.MySQL" />
-      <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestTokenDAO" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTokenDAO.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="datasource.MySQL.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="datasource.MySQL" />
-      <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestTokenDAO" />
-      <option name="METHOD_NAME" value="testInsert" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTokenDAO.testRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="datasource.MySQL.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="datasource.MySQL" />
-      <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestTokenDAO" />
-      <option name="METHOD_NAME" value="testRead" />
+      <option name="METHOD_NAME" value="testAddPlaylists" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -394,19 +347,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in Spotitube" />
-      <item itemvalue="JUnit.TestTokenDAO.testRead" />
-      <item itemvalue="JUnit.TestTokenDAO.testInsert" />
-      <item itemvalue="JUnit.TestTokenDAO" />
-      <item itemvalue="JUnit.TestPlaylistDAO.testGetAllPlaylists" />
       <item itemvalue="TomEE Server.Unnamed" />
+      <item itemvalue="JUnit.TestPlaylistDAO.testAddPlaylists" />
+      <item itemvalue="JUnit.TestOwner.testConstructor" />
+      <item itemvalue="JUnit.TestMySQLConnectionFactory.testConnction" />
+      <item itemvalue="JUnit.TestMySQLConnectionFactory.testGetConnection" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPlaylistDAO.testGetAllPlaylists" />
         <item itemvalue="JUnit.All in Spotitube" />
-        <item itemvalue="JUnit.TestTokenDAO" />
-        <item itemvalue="JUnit.TestTokenDAO.testInsert" />
-        <item itemvalue="JUnit.TestTokenDAO.testRead" />
+        <item itemvalue="JUnit.TestMySQLConnectionFactory.testGetConnection" />
+        <item itemvalue="JUnit.TestMySQLConnectionFactory.testConnction" />
+        <item itemvalue="JUnit.TestOwner.testConstructor" />
+        <item itemvalue="JUnit.TestPlaylistDAO.testAddPlaylists" />
       </list>
     </recent_temporary>
   </component>
@@ -434,6 +387,7 @@
       <workItem from="1568141516213" duration="210000" />
       <workItem from="1568141753460" duration="18914000" />
       <workItem from="1571499937553" duration="1489000" />
+      <workItem from="1571578320503" duration="10596000" />
     </task>
     <servers />
   </component>
@@ -467,14 +421,19 @@
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test/datasource/MySQL/TestPlaylistDAO.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="71" />
+          <url>file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="72" />
+          <line>60</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/datasource/MySQL/TestMySQLConnectionFactory.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -498,10 +457,16 @@
     <SUITE FILE_PATH="coverage/Spotitube$datasource_MySQL_in_Spotitube.ic" NAME="datasource.MySQL in Spotitube Coverage Results" MODIFIED="1570724033494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>datasource.MySQL.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Spotitube$datasource_in_Spotitube.ic" NAME="datasource in Spotitube Coverage Results" MODIFIED="1571580285649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>datasource.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Spotitube$TestOwnerDAO.ic" NAME="TestOwnerDAO Coverage Results" MODIFIED="1570719454146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>datasource.MySQL.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Spotitube$All_in_Spotitube.ic" NAME="All in Spotitube Coverage Results" MODIFIED="1571326757431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Spotitube$TestOwner_testConstructor.ic" NAME="TestOwner.testConstructor Coverage Results" MODIFIED="1571931071768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Spotitube$All_in_Spotitube.ic" NAME="All in Spotitube Coverage Results" MODIFIED="1571931798794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Spotitube$TestTrackDAO.ic" NAME="TestTrackDAO Coverage Results" MODIFIED="1570723583107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>datasource.MySQL.*</FILTER>
     </SUITE>

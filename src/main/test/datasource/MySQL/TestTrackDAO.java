@@ -27,7 +27,7 @@ public class TestTrackDAO {
     private IMySQLConnection conn;
 
     @InjectMocks
-    private ITrackDAO TrackDao = new MySQLTrackDAO();;
+    private ITrackDAO TrackDao = new MySQLTrackDAO();
 
     private H2Connector h2 = new H2Connector();
 

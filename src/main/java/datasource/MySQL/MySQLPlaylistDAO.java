@@ -29,6 +29,12 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     @Inject
     private IOwnerDAO ownerDAO;
 
+    @Inject
+    public MySQLPlaylistDAO(ITrackDAO trackDAO, IOwnerDAO ownerDAO) {
+        this.trackDAO = trackDAO;
+        this.ownerDAO = ownerDAO;
+    }
+
     @Override
     public List<Playlist> getAllPlaylists(String token) {
         List<Playlist> playlists = new ArrayList<>();
@@ -47,7 +53,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
                 Playlist playlist = new Playlist(rs.getInt(1), rs.getString(2), isOwner, tracks);
                 playlists.add(playlist);
             }
-            conn.close();
             return playlists;
 
         } catch (SQLException e) {

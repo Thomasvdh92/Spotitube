@@ -1,7 +1,6 @@
 package datasource;
 
 import org.apache.ibatis.jdbc.ScriptRunner;
-import org.h2.jdbc.JdbcSQLSyntaxErrorException;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -15,7 +14,7 @@ public class H2Connector {
         Connection realConn = null;
         try {
             Class.forName("org.h2.Driver");
-            realConn = DriverManager.getConnection("jdbc:h2:~/test;DB_CLOSE_DELAY=-1", "sa", "");
+            realConn = DriverManager.getConnection("jdbc:h2:~/test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE", "sa", "");
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

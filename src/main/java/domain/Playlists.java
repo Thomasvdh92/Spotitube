@@ -13,6 +13,9 @@ public class Playlists {
 
     public Playlists(){}
 
+    /**
+     * Method used to calculate the total length of all playlists inside a Playlists object.
+     */
     public void calculateLength() {
         for(Playlist p : playlists) {
             this.length += p.getLength();

@@ -24,7 +24,7 @@ public class TestOwnerDAO {
     private IMySQLConnection conn;
 
     @InjectMocks
-    private IOwnerDAO OwnerDAO = new MySQLOwnerDAO();;
+    private IOwnerDAO OwnerDAO = new MySQLOwnerDAO();
 
     private H2Connector h2 = new H2Connector();
 
