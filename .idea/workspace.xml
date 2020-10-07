@@ -7,9 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ad5980-c076-413a-9baf-7d9a5c1b29b4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/IMySQLConnection.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/exceptions/ApplicationException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/exceptions/ApplicationExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestPlaylistDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/IConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/IOwnerDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/IPlaylistDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/ITokenDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/ITrackDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/MySQL/IMySQLConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLConnectionFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLOwnerDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLPlaylistDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLTokenDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLTrackDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/domain/Playlist.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/domain/Playlists.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/domain/Tracks.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/exceptions/ApplicationException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/exceptions/ApplicationExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/services/LoginService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/services/PlaylistService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/services/TrackService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/datasource/MySQL/TestPlaylistDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/IConnection.java" afterDir="false" />
@@ -17,7 +38,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/IPlaylistDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ITokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/ITokenDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ITrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/ITrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/IMySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/IMySQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/IMySQLConnection.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLConnectionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLOwnerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLPlaylistDAO.java" afterDir="false" />
@@ -30,7 +51,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Track.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Tracks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/middleware/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/middleware/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/PlaylistService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/TrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/TrackService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestMySQLConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestMySQLConnectionFactory.java" afterDir="false" />
@@ -57,13 +78,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbproperties.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/domain/Owner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlist.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Track.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/domain/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/domain/Track.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/domain/Tracks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/middleware/CorsFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/middleware/CorsFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/han/ica/oose/dea/spotitube/middleware/CorsFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/services/LoginService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/services/PlaylistService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/services/TrackService.class" beforeDir="false" />
@@ -415,7 +436,7 @@
       <workItem from="1568141753460" duration="18914000" />
       <workItem from="1571499937553" duration="1489000" />
       <workItem from="1571578320503" duration="10596000" />
-      <workItem from="1602069886250" duration="2887000" />
+      <workItem from="1602069886250" duration="3242000" />
     </task>
     <servers />
   </component>
@@ -439,38 +460,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="786" y="446" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602069930719" />
-    <state width="1877" height="423" key="GridCell.Tab.0.bottom" timestamp="1602072740428">
+    <state width="1877" height="422" key="GridCell.Tab.0.bottom" timestamp="1602073092372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="423" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072740428" />
-    <state width="1877" height="423" key="GridCell.Tab.0.center" timestamp="1602072740427">
+    <state width="1877" height="422" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073092372" />
+    <state width="1877" height="422" key="GridCell.Tab.0.center" timestamp="1602073092371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="423" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072740427" />
-    <state width="1877" height="423" key="GridCell.Tab.0.left" timestamp="1602072740427">
+    <state width="1877" height="422" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073092371" />
+    <state width="1877" height="422" key="GridCell.Tab.0.left" timestamp="1602073092371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="423" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072740427" />
-    <state width="1877" height="423" key="GridCell.Tab.0.right" timestamp="1602072740427">
+    <state width="1877" height="422" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073092371" />
+    <state width="1877" height="422" key="GridCell.Tab.0.right" timestamp="1602073092372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="423" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072740427" />
-    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1602072559494">
+    <state width="1877" height="422" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073092372" />
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1602073020401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072559494" />
-    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1602072559494">
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073020401" />
+    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1602073020400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072559494" />
-    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1602072559494">
+    <state width="1877" height="338" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073020400" />
+    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1602073020400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072559494" />
-    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1602072559494">
+    <state width="1877" height="338" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073020400" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1602073020400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="338" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602072559494" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602073020400" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -479,16 +500,6 @@
           <url>file://$PROJECT_DIR$/src/main/test/datasource/MySQL/TestTrackDAO.java</url>
           <line>45</line>
           <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test/datasource/MySQL/TestPlaylistDao.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test/datasource/MySQL/TestPlaylistDao.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
