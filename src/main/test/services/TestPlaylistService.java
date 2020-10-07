@@ -1,11 +1,12 @@
 package services;
 
-import datasource.IPlaylistDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.IPlaylistDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.ITrackDAO;
+import nl.han.ica.oose.dea.spotitube.domain.*;
 
-import datasource.ITrackDAO;
-import datasource.IOwnerDAO;
-import domain.*;
-
+import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
+import nl.han.ica.oose.dea.spotitube.services.PlaylistService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -53,7 +54,7 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testGetPlaylists() {
+    public void testGetPlaylists() throws ApplicationException {
         Response r = playlistService.getPlaylists(token.getToken());
         assert r.getStatus() == 200;
     }
@@ -63,18 +64,18 @@ public class TestPlaylistService {
         Mockito.doNothing().when(playlistDAO).add(p, token.getToken());
         String body = "{'name':'new-playlist'}";
         Response r = playlistService.addPlaylist(body, token.getToken());
-        assert r.getStatus() == 200;
+        assert r.getStatus() == 201;
     }
 
     @Test
-    public void testDelete() {
+    public void testDelete() throws ApplicationException {
         Mockito.doNothing().when(playlistDAO).delete(1);
         Response r = playlistService.delete(1, token.getToken());
         assert r.getStatus() == 200;
     }
 
     @Test
-    public void testPut() {
+    public void testPut() throws ApplicationException {
         Mockito.doNothing().when(playlistDAO).put(p);
         String body = "{'name':'new-playlist'}";
         Response r = playlistService.put(body, 1, token.getToken());
@@ -82,7 +83,7 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testRemoveTrackFromPlaylist() {
+    public void testRemoveTrackFromPlaylist() throws ApplicationException {
         Mockito.doNothing().when(playlistDAO).removeTrackFromPlaylist(1, 1);
         Response r = playlistService.removeTrackFromPlaylist(1, 1, token.getToken());
         assert r.getStatus() == 200;
@@ -111,7 +112,7 @@ public class TestPlaylistService {
                 "}";
         Mockito.doNothing().when(playlistDAO).addTrackToPlaylist(1, t);
         Response r = playlistService.addTrackToPlaylist(1, body, token.getToken());
-        assert r.getStatus() == 200;
+        assert r.getStatus() == 201;
     }
 
 

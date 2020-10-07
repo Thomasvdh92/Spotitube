@@ -1,6 +1,6 @@
 package datasource;
 
-import com.mysql.cj.protocol.Resultset;
+import org.h2.jdbc.JdbcSQLSyntaxErrorException;
 
 import java.sql.*;
 
@@ -21,23 +21,27 @@ public class H2Connector {
     }
 
     public void createUserTableAndAddUser(Connection conn) {
-        String userTableQuery = "CREATE TABLE `user` (\n" +
-                "  `UserID` int(11) NOT NULL AUTO_INCREMENT,\n" +
-                "  `username` varchar(100) NOT NULL,\n" +
-                "  `password` varchar(100) NOT NULL,\n" +
-                "  PRIMARY KEY (`UserID`),\n" +
-                "  UNIQUE KEY `Username` (`Username`)\n" +
+        String userTableQuery = "CREATE TABLE `owner` (\n" +
+                "  `OwnerID` int(11) NOT NULL AUTO_INCREMENT,\n" +
+                "  `Username` varchar(100) NOT NULL,\n" +
+                "  `Password` varchar(100) NOT NULL,\n" +
+                "  PRIMARY KEY (`OwnerID`),\n" +
+//                "  UNIQUE KEY `Username` (`Username`)\n" +
                 ")";
 
-        String insertUserQuery = "INSERT INTO USER(USERNAME,PASSWORD) VALUES('username', 'password')";
+        String insertUserQuery = "INSERT INTO Owner(USERNAME,PASSWORD) VALUES('username', 'password')";
 
         try {
             Statement stmt = conn.createStatement();
-            stmt.executeUpdate("DROP TABLE user");
+            try {
+                stmt.executeUpdate("DROP TABLE owner");
+            } catch (JdbcSQLSyntaxErrorException e) {
+                System.out.println("doing nothing");
+            }
             stmt.executeUpdate(userTableQuery);
             stmt.executeUpdate(insertUserQuery);
             stmt.close();
-            System.out.println("Created user table in H2 database");
+            System.out.println("Created owner table in H2 database");
         } catch (SQLException e) {
             e.printStackTrace();
         }

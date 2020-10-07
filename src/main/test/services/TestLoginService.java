@@ -1,9 +1,11 @@
 package services;
 
-import datasource.ITokenDAO;
-import datasource.IOwnerDAO;
-import domain.Token;
-import domain.Owner;
+import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.ITokenDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.domain.Token;
+import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
+import nl.han.ica.oose.dea.spotitube.services.LoginService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -43,22 +45,21 @@ public class TestLoginService {
 
     @Test
     public void testAthenticateCorrect() {
-
         when(OwnerDAO.read(Ownername)).thenReturn(owner);
 
-        assert loginService.authenticate(Ownername, password) != null;
+        assert loginService.authenticate(Ownername, password);
     }
 
     @Test
     public void testAuthenticateIncorrect() {
         when(OwnerDAO.read(Ownername)).thenReturn(null);
 
-        assert loginService.authenticate(Ownername, password) == null;
+        assert !loginService.authenticate(Ownername, password);
     }
 
     @Test
-    public void testLogin() {
-        String body = "{'owner':'owner', 'password':'password'}";
+    public void testLogin() throws ApplicationException {
+        String body = "{'user':'owner', 'password':'password'}";
         when(OwnerDAO.read(Ownername)).thenReturn(owner);
         Mockito.doNothing().when(tokenDAO).insert(any(Token.class));
         Response r = loginService.login(body);
@@ -66,8 +67,8 @@ public class TestLoginService {
     }
 
     @Test
-    public void testLoginIncorrect() {
-        String body = "{'owner':'false', 'password':'flase'}";
+    public void testLoginIncorrect() throws ApplicationException {
+        String body = "{'user':'false', 'password':'false'}";
         when(OwnerDAO.read(Ownername)).thenReturn(owner);
         Mockito.doNothing().when(tokenDAO).insert(any(Token.class));
         Response r = loginService.login(body);

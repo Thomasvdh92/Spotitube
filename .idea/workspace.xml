@@ -7,71 +7,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ad5980-c076-413a-9baf-7d9a5c1b29b4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datasource/IOwnerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/datasource/H2Connector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/domain/TestOwner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/domain/TestToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/domain/TestTrack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/services/TestLoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/services/TestTrackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Spotitube.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/exceptions/ApplicationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/exceptions/ApplicationExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ITrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/ITrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IUserDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/ITrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/ITrackDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IUserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLConnectionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTokenDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTrackDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLUserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Track.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/TrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/TrackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/lib/junit-jupiter-api-5.0.0-M3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/lib/junit-platform-commons-1.0.0-M3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/lib/opentest4j-1.0.0-M1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/IPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/IPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/ITrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/ITrackDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/IUserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLConnectionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLPlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLPlaylistDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTokenDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTrackDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLUserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Track.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TrackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/IConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/IOwnerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/IPlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ITokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/ITokenDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/ITrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/ITrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/IMySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/IMySQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLOwnerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLPlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLTokenDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLTrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Playlists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Playlists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/domain/Tracks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/middleware/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/RequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/middleware/RequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/PlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/TrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/services/TrackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/datasource/H2Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/datasource/H2Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/domain/TestTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/domain/TestTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/services/TestLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/services/TestLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/services/TestTrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/services/TestTrackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/META-INF/Spotitube.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/META-INF/Spotitube.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IOwnerDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/IPlaylistDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/ITokenDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/ITrackDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/IMySQLConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLOwnerDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLPlaylistDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Playlists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Track.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/domain/Tracks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/middleware/CorsFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/middleware/RequestFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/PlaylistService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spotitube/WEB-INF/classes/services/TrackService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Spotitube.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/Spotitube.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/IConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/IOwnerDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/IPlaylistDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/ITokenDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/ITrackDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/IMySQLConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLOwnerDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLPlaylistDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTokenDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datasource/MySQL/MySQLTrackDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Playlists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Track.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Tracks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/middleware/CorsFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/middleware/RequestFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/PlaylistService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/TrackService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Spotitube.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/datasource/H2Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/datasource/H2Connector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/datasource/MySQL/TestOwnerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/datasource/MySQL/TestOwnerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestOwner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestPlaylist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestPlaylist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/TestTrack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/TestTrack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/services/TestLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/TestLoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/services/TestPlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/TestPlaylistService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/services/TestTrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/TestTrackService.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,9 +146,6 @@
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
   </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="334" />
-  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -132,127 +159,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlists.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="47" column="96" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/domain/TestToken.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/services/TestLoginService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Owner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding>
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Token.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -274,54 +180,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/services/TestService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/ITrackInPlaylistDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/IMySQLConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/ITokenDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/ITokenDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Tracks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/middleware/RequestFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/TrackService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Playlists.java" />
-        <option value="$PROJECT_DIR$/src/main/test/domain/TestUser.java" />
-        <option value="$PROJECT_DIR$/src/main/test/domain/TestTrack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/test/datasource/MySQL/H2Connector.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/test/datasource/H2Connector.java" />
-        <option value="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestUserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/IUserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLUserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/dbproperties.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/ITrackDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/test/services/TestTrackService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Track.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Owner.java" />
-        <option value="$PROJECT_DIR$/createscript.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" />
-        <option value="$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java" />
-        <option value="$PROJECT_DIR$/src/main/test/services/TestLoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Token.java" />
-        <option value="$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java" />
-        <option value="$PROJECT_DIR$/src/main/test/domain/TestToken.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Playlist.java" />
-      </list>
-    </option>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -329,151 +187,24 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
+  <component name="ProjectId" id="1iUzNoiqagq8jrHOihbtaMIjSFx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <hideEmptyPackages ProjectPane="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-              <item name="MySQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-              <item name="MySQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553538228337" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/MAD/dha-sensor-2019-2019-thomas-en-eric" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14660195" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -486,26 +217,14 @@
       <recent name="domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\herkansing\Spotitube\src\main\java\nl\han\ica\oose\dea\spotitube" />
       <recent name="C:\herkansing\Spotitube\src\main\resources" />
       <recent name="C:\herkansing\Spotitube\src\main\java\datasource\MySQL" />
       <recent name="C:\herkansing\Spotitube\src\main" />
       <recent name="C:\herkansing\Spotitube\src\main\java" />
-      <recent name="C:\herkansing\Spotitube\src\main\java\datasource" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="TomEE Server.Unnamed">
+  <component name="RunManager" selected="JUnit.TestOwnerDAO">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -522,6 +241,22 @@
       <module name="Spotitube" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOwnerDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datasource.MySQL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="datasource.MySQL" />
+      <option name="MAIN_CLASS_NAME" value="datasource.MySQL.TestOwnerDAO" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -560,7 +295,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlaylistService.testAddTrackToPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlaylistService.testAddPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Spotitube" />
       <extension name="coverage">
         <pattern>
@@ -570,24 +305,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="services" />
       <option name="MAIN_CLASS_NAME" value="services.TestPlaylistService" />
-      <option name="METHOD_NAME" value="testAddTrackToPlaylist" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPlaylistService.testGetTracksByPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TestPlaylistService" />
-      <option name="METHOD_NAME" value="testGetTracksByPlaylist" />
+      <option name="METHOD_NAME" value="testAddPlaylist" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -683,20 +401,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TomEE Server.Unnamed" />
+      <item itemvalue="JUnit.TestPlaylistService.testAddPlaylist" />
       <item itemvalue="JUnit.TestPlaylistService" />
-      <item itemvalue="JUnit.TestPlaylistService.testGetTracksByPlaylist" />
-      <item itemvalue="JUnit.TestPlaylistService.testAddTrackToPlaylist" />
       <item itemvalue="JUnit.All in Spotitube" />
       <item itemvalue="JUnit.TestOwnerDAO.test" />
-      <item itemvalue="TomEE Server.Unnamed" />
+      <item itemvalue="JUnit.TestOwnerDAO" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestOwnerDAO" />
         <item itemvalue="JUnit.TestOwnerDAO.test" />
         <item itemvalue="JUnit.All in Spotitube" />
-        <item itemvalue="JUnit.TestPlaylistService.testAddTrackToPlaylist" />
-        <item itemvalue="JUnit.TestPlaylistService.testGetTracksByPlaylist" />
         <item itemvalue="JUnit.TestPlaylistService" />
+        <item itemvalue="JUnit.TestPlaylistService.testAddPlaylist" />
       </list>
     </recent_temporary>
   </component>
@@ -721,92 +439,103 @@
       <workItem from="1553510955241" duration="8490000" />
       <workItem from="1553596845783" duration="2963000" />
       <workItem from="1554293449388" duration="599000" />
+      <workItem from="1554380367128" duration="599000" />
+      <workItem from="1587381710173" duration="25000" />
+      <workItem from="1587383111754" duration="58000" />
+      <workItem from="1601976923630" duration="12940000" />
+      <workItem from="1602064367625" duration="112000" />
+      <workItem from="1602064855496" duration="3045000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 48m 03s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 50m 11s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 50m 54s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 51m 13s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 51m 37s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 51m 54s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 52m 16s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 52m 42s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 53m 06s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestUserDAO_test - 2019.03.13 at 13h 53m 23s.xml">
-      <configuration name="TestUserDAO.test" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53577000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3288889" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Tool Output" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3288889" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="15" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info anchor="right" id="JSF" order="11" />
-      <window_info anchor="right" id="CDI" order="12" />
-      <window_info anchor="right" id="Coverage" order="13" side_tool="true" weight="0.32995737" />
-      <window_info anchor="right" id="Maven" order="14" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="227" key="#com.intellij.ide.util.MemberChooser" timestamp="1601988826486">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="227" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601988826486" />
+    <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602064384813">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602064384813" />
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1602067695159">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067695159" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1602067695158">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067695158" />
+    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1602067695158">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067695158" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1602067695158">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067695158" />
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1602067419319">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067419319" />
+    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1602067419318">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067419318" />
+    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1602067419318">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067419318" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1602067419319">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602067419319" />
+    <state width="1635" height="400" key="GridCell.Tab.2.bottom" timestamp="1602066723380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.2.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723380" />
+    <state width="1635" height="400" key="GridCell.Tab.2.center" timestamp="1602066723379">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.2.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723379" />
+    <state width="1635" height="400" key="GridCell.Tab.2.left" timestamp="1602066723379">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.2.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723379" />
+    <state width="1635" height="400" key="GridCell.Tab.2.right" timestamp="1602066723379">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723379" />
+    <state width="1635" height="400" key="GridCell.Tab.3.bottom" timestamp="1602066723381">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.3.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723381" />
+    <state width="1635" height="400" key="GridCell.Tab.3.center" timestamp="1602066723380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.3.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723380" />
+    <state width="1635" height="400" key="GridCell.Tab.3.left" timestamp="1602066723380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.3.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723380" />
+    <state width="1635" height="400" key="GridCell.Tab.3.right" timestamp="1602066723381">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1635" height="400" key="GridCell.Tab.3.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602066723380" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1601980761294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601980761294" />
+    <state x="668" y="269" key="refactoring.ChangeSignatureDialog" timestamp="1601988690835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="269" key="refactoring.ChangeSignatureDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601988690835" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1601981595407">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601981595407" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -814,8 +543,27 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java</url>
           <line>61</line>
-          <properties />
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/services/LoginService.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nl/han/ica/oose/dea/spotitube/datasource/MySQL/MySQLPlaylistDAO.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/domain/TestToken.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/services/TestLoginService.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -829,428 +577,12 @@
         <watch expression="((MySQLTrackDAO)this.trackDAO).connection" custom="datasource.MySQL.MySQLTrackDAO" />
         <watch expression="rs" />
         <watch expression="rs" language="JAVA" />
+        <watch expression="playlists.playlists.get(0)" />
       </configuration>
     </watches-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/middleware/ExceptionHandler.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/ws/rs/javax.ws.rs-api/2.1/javax.ws.rs-api-2.1.jar!/javax/ws/rs/container/ContainerResponseFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/middleware/RequestFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/IMySQLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="446" column="19" selection-start-line="446" selection-start-column="19" selection-end-line="446" selection-end-column="19" />
-          <folding>
-            <element signature="e#17088#17089#0" expanded="true" />
-            <element signature="e#17123#17124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/domain/TestTrack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="163" column="11" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
-          <folding>
-            <element signature="e#6252#6253#0" expanded="true" />
-            <element signature="e#6320#6321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jayway/restassured/rest-assured/2.4.0/rest-assured-2.4.0.jar!/com/jayway/restassured/response/ValidatableResponseOptions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/middleware/CorsFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.10.0/mockito-core-2.10.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
-          <folding>
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#1956#1957#0" expanded="true" />
-            <element signature="e#4764#4899#0" expanded="true" />
-            <element signature="e#4898#4899#0" expanded="true" />
-            <element signature="e#5134#5282#0" expanded="true" />
-            <element signature="e#5281#5282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runner/JUnitCore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/javax/ws/rs/core/Response.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/domain/TestOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/test.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/sql/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="221" column="22" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.4.198/h2-1.4.198.jar!/org/h2/jdbc/JdbcStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/datasource/H2Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.10.0/mockito-core-2.10.0.jar!/org/mockito/InjectMocks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/datasource/MySQL/TestOwnerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dbproperties.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/ITrackDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/services/TestTrackService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="84" selection-start-line="36" selection-start-column="84" selection-end-line="36" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/TrackService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTrackDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Tracks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Track.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IOwnerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createscript.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/ITokenDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLOwnerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/PlaylistService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/domain/TestPlaylist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLPlaylistDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/services/TestPlaylistService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IPlaylistDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/MySQL/MySQLTokenDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="47" column="96" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/domain/TestToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/services/TestLoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Owner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Spotitube$All_in_Spotitube.ic" NAME="All in Spotitube Coverage Results" MODIFIED="1602067462672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="masterDetails">
     <states>

@@ -1,8 +1,10 @@
 package datasource.MySQL;
 
 import datasource.H2Connector;
-import datasource.IOwnerDAO;
-import domain.Owner;
+import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLConnectionFactory;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Owner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +25,8 @@ public class TestOwnerDAO {
 
     Connection connection;
 
-    @InjectMocks MySQLConnectionFactory conn;
+    @InjectMocks
+    MySQLConnectionFactory conn;
 
     H2Connector h2 = new H2Connector();
 
