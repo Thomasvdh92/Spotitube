@@ -1,9 +1,11 @@
 package datasource.MySQL;
 
 import datasource.H2Connector;
-import datasource.ITrackDAO;
-import domain.Track;
-import domain.Tracks;
+import nl.han.ica.oose.dea.spotitube.datasource.ITrackDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.IMySQLConnection;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLTrackDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Track;
+import nl.han.ica.oose.dea.spotitube.domain.Tracks;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,8 +1,9 @@
 package services;
 
-import datasource.ITrackDAO;
-import domain.Token;
-import domain.Tracks;
+import nl.han.ica.oose.dea.spotitube.datasource.ITrackDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Token;
+import nl.han.ica.oose.dea.spotitube.domain.Tracks;
+import nl.han.ica.oose.dea.spotitube.services.TrackService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

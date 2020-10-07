@@ -1,8 +1,10 @@
 package datasource.MySQL;
 
 import datasource.H2Connector;
-import datasource.IOwnerDAO;
-import domain.Owner;
+import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.IMySQLConnection;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Owner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

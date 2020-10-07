@@ -1,9 +1,11 @@
 package services;
 
-import datasource.ITokenDAO;
-import datasource.IOwnerDAO;
-import domain.Token;
-import domain.Owner;
+import nl.han.ica.oose.dea.spotitube.datasource.ITokenDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Token;
+import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
+import nl.han.ica.oose.dea.spotitube.services.LoginService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -11,7 +13,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import javax.ws.rs.core.Response;
-
 import java.sql.SQLException;
 
 import static org.mockito.Mockito.*;
@@ -58,7 +59,7 @@ public class TestLoginService {
     }
 
     @Test
-    public void testLogin() throws SQLException {
+    public void testLogin() throws SQLException, ApplicationException {
         String body = "{'user':'user', 'password':'password'}";
         when(OwnerDAO.read(username)).thenReturn(owner);
         Mockito.doNothing().when(tokenDAO).insert(any(Token.class));
@@ -67,7 +68,7 @@ public class TestLoginService {
     }
 
     @Test
-    public void testLoginIncorrect() throws SQLException {
+    public void testLoginIncorrect() throws SQLException, ApplicationException {
         String body = "{'user':'false', 'password':'false'}";
         when(OwnerDAO.read(username)).thenReturn(owner);
         Mockito.doNothing().when(tokenDAO).insert(any(Token.class));
@@ -75,5 +76,9 @@ public class TestLoginService {
         assert r.getStatus() == 401;
     }
 
-
+    @Test(expected = ApplicationException.class)
+    public void testExceptionOnLogin() throws SQLException, ApplicationException {
+        String body = "{'user':'user'}";
+        Response r = loginService.login(body);
+    }
 }

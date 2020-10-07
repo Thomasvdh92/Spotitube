@@ -1,5 +1,6 @@
 package domain;
 
+import nl.han.ica.oose.dea.spotitube.domain.Token;
 import org.junit.Test;
 
 public class TestToken {

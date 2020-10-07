@@ -1,5 +1,6 @@
 package domain;
 
+import nl.han.ica.oose.dea.spotitube.domain.Owner;
 import org.junit.Test;
 
 public class TestOwner {

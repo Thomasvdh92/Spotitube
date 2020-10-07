@@ -1,5 +1,7 @@
 package domain;
 
+import nl.han.ica.oose.dea.spotitube.domain.Track;
+import nl.han.ica.oose.dea.spotitube.domain.Tracks;
 import org.junit.Test;
 
 import java.util.ArrayList;

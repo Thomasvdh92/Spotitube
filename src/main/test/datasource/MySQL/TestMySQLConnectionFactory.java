@@ -1,5 +1,7 @@
 package datasource.MySQL;
 
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.IMySQLConnection;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLConnectionFactory;
 import org.junit.Test;
 import org.mockito.Mock;
 

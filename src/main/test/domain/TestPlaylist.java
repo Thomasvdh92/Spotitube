@@ -1,5 +1,9 @@
 package domain;
 
+import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.domain.Playlist;
+import nl.han.ica.oose.dea.spotitube.domain.Playlists;
+import nl.han.ica.oose.dea.spotitube.domain.Track;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -1,8 +1,10 @@
 package datasource.MySQL;
 
 import datasource.H2Connector;
-import datasource.ITokenDAO;
-import domain.Token;
+import nl.han.ica.oose.dea.spotitube.datasource.ITokenDAO;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.IMySQLConnection;
+import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLTokenDAO;
+import nl.han.ica.oose.dea.spotitube.domain.Token;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
