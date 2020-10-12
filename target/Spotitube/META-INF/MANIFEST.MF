@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
+Built-By: Thomas
 Created-By: IntelliJ IDEA
-Built-By: thomasvanderhoeven
-Build-Jdk: 12.0.2
+Build-Jdk: 1.8.0_101
 

@@ -7,4 +7,5 @@
         <!--<class>TrackInPlaylistDAONoSQL</class>-->
         <!--<class>UserDAONoSQL</class>-->
     </alternatives>
+
 </beans>
