@@ -1,8 +1,6 @@
 package nl.han.ica.oose.dea.spotitube.annotations;
 
 import nl.han.ica.oose.dea.spotitube.datasource.ITokenDAO;
-import nl.han.ica.oose.dea.spotitube.domain.Token;
-import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
 import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 
 import javax.annotation.Priority;
