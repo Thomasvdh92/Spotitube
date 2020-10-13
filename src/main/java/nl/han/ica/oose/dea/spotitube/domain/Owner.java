@@ -3,28 +3,28 @@ package nl.han.ica.oose.dea.spotitube.domain;
 
 public class Owner {
     private int id;
-    private String username;
+    private String user;
     private String password;
 
-    public Owner(int id, String username, String password) {
+    public Owner(int id, String user, String password) {
         this.id = id;
-        this.username = username;
+        this.user = user;
         this.password = password;
     }
 
-    public Owner(String username, String password) {
-        this.username = username;
+    public Owner(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
     public Owner(){}
 
-    public String getUsername() {
-        return username;
+    public String getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {
