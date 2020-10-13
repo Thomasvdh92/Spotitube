@@ -19,7 +19,7 @@ public class Token {
 
     public Token(){}
 
-    private String GenerateToken(String user) {
+    public String GenerateToken(String user) {
         Random rand = new Random();
         StringBuilder tokenString = new StringBuilder();
         // Generate a random string used for the token
