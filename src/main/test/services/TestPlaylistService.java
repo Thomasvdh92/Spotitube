@@ -7,6 +7,7 @@ import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
 
 import nl.han.ica.oose.dea.spotitube.domain.*;
 import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
+import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 import nl.han.ica.oose.dea.spotitube.services.PlaylistService;
 import org.junit.Before;
 import org.junit.Test;
@@ -55,13 +56,13 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testGetPlaylists() throws ApplicationException {
+    public void testGetPlaylists() throws EntityNotFoundException {
         Response r = playlistService.getPlaylists(token.getToken());
         assert r.getStatus() == 200;
     }
 
     @Test
-    public void testAddPlaylist() {
+    public void testAddPlaylist() throws EntityNotFoundException {
         Mockito.doNothing().when(playlistDAO).add(p, token.getToken());
         String body = "{'name':'new-playlist'}";
         Response r = playlistService.addPlaylist(body, token.getToken());
@@ -69,14 +70,14 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testDelete() throws ApplicationException {
+    public void testDelete() throws EntityNotFoundException {
         Mockito.doNothing().when(playlistDAO).delete(1);
         Response r = playlistService.delete(1, token.getToken());
         assert r.getStatus() == 200;
     }
 
     @Test
-    public void testPut() throws ApplicationException {
+    public void testPut() throws EntityNotFoundException {
         Mockito.doNothing().when(playlistDAO).put(p);
         String body = "{'name':'new-playlist'}";
         Response r = playlistService.put(body, 1, token.getToken());
@@ -84,7 +85,7 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testRemoveTrackFromPlaylist() throws ApplicationException {
+    public void testRemoveTrackFromPlaylist() throws EntityNotFoundException {
         Mockito.doNothing().when(playlistDAO).removeTrackFromPlaylist(1, 1);
         Response r = playlistService.removeTrackFromPlaylist(1, 1, token.getToken());
         assert r.getStatus() == 200;
@@ -98,7 +99,7 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testAddTrackToPlaylist() {
+    public void testAddTrackToPlaylist() throws EntityNotFoundException {
         Track t = new Track();
         String body = "{\n" +
                 "  \"id\": 4,\n" +

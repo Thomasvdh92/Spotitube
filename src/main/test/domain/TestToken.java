@@ -2,6 +2,7 @@ package domain;
 
 import nl.han.ica.oose.dea.spotitube.domain.Token;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 public class TestToken {
 
@@ -17,6 +18,8 @@ public class TestToken {
         t.setUser("user2");
         assert t.getToken().equals("234");
         assert t.getUser().equals("user2");
+        t = new Token("user"); // Create user without tokenstring
+        assert t.getToken() != null;
     }
 
 }

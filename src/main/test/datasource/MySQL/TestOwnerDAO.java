@@ -5,6 +5,7 @@ import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
 import nl.han.ica.oose.dea.spotitube.datasource.MySQL.IMySQLConnection;
 import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLOwnerDAO;
 import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +15,10 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.io.FileNotFoundException;
 import java.sql.Connection;
+import java.sql.SQLException;
+
 import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestOwnerDAO {
@@ -38,26 +42,33 @@ public class TestOwnerDAO {
     }
 
     @Test
-    public void testReadUsername() {
+    public void testReadUsername() throws EntityNotFoundException {
         Owner owner = OwnerDAO.read("user");
-        assert owner.getUsername().equals("user");
+        assert owner.getUser().equals("user");
         assert owner.getPassword().equals("password");
-        assert OwnerDAO.read("") == null;
     }
 
     @Test
-    public void testReadId() {
+    public void testReadId() throws EntityNotFoundException {
         Owner owner = OwnerDAO.read(1);
-        assert owner.getUsername().equals("user");
+        assert owner.getUser().equals("user");
         assert owner.getPassword().equals("password");
-        assert OwnerDAO.read(2) == null;
     }
 
     @Test
-    public void testGetUserByToken() {
+    public void testGetUserByToken() throws EntityNotFoundException {
         Owner owner = OwnerDAO.getOwnerByTokenString("1234-1234-1234");
-        assert owner.getUsername().equals("user");
+        assert owner.getUser().equals("user");
         assert owner.getPassword().equals("password");
-        assert OwnerDAO.getOwnerByTokenString("") == null;
+    }
+
+    @Test
+    public void testExceptions() {
+        Exception e = assertThrows(EntityNotFoundException.class, () -> OwnerDAO.read("wrong_username"));
+        assert e.getMessage().equals(String.format("Entity %s not found", Owner.class.getName()));
+        e = assertThrows(EntityNotFoundException.class, () -> OwnerDAO.read(123));
+        assert e.getMessage().equals(String.format("Entity %s not found", Owner.class.getName()));
+        e = assertThrows(EntityNotFoundException.class, () -> OwnerDAO.getOwnerByTokenString("wrong_token_string-123"));
+        assert e.getMessage().equals(String.format("Entity %s not found", Owner.class.getName()));
     }
 }
