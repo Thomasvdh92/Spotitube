@@ -1,24 +1,30 @@
 package nl.han.ica.oose.dea.spotitube.datasource.MySQL;
 
+import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
+
 import javax.enterprise.inject.Default;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 @Default
 public class MySQLConnectionFactory implements IMySQLConnection {
 
     private static Properties prop = new Properties();
 
+    private final static Logger LOGGER = Logger.getLogger("Logger");
+
     static{
         try {
             prop.load(Objects.requireNonNull(MySQLConnectionFactory.class.getClassLoader().getResourceAsStream("dbproperties.properties")));
             Class.forName(prop.getProperty("jdbc.driver"));
         }catch (ClassNotFoundException | IOException e){
-            e.printStackTrace();
+            LOGGER.severe(e.getMessage());
         }
     }
 
