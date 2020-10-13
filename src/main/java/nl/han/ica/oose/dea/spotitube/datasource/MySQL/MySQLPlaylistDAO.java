@@ -51,6 +51,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
                 List<Track> tracks = trackDAO.tracksByPlaylistId(rs.getInt(1));
                 boolean isOwner = false;
                 Owner currentOwner = ownerDAO.getOwnerByTokenString(token);
+                System.out.println();
                 if(currentOwner.getId() == rs.getInt(3)) {
                     isOwner = true;
                 }
@@ -75,7 +76,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             Owner owner = ownerDAO.getOwnerByTokenString(token);
             stmt.setInt(2, owner.getId());
             stmt.executeUpdate();
-            conn.close();
         } catch (SQLException | EntityNotFoundException e) {
             LOGGER.warning(e.getMessage());
             throw new EntityNotFoundException(Playlist.class);
@@ -89,7 +89,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM Playlist WHERE PlaylistID = ?");
             stmt.setInt(1, id);
             stmt.executeUpdate();
-            conn.close();
         } catch (SQLException e) {
             LOGGER.warning(e.getMessage());
         }
@@ -103,7 +102,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.setString(1, playlist.getName());
             stmt.setInt(2, playlist.getId());
             stmt.executeUpdate();
-            conn.close();
         } catch (SQLException e) {
             LOGGER.warning(e.getMessage());
         }

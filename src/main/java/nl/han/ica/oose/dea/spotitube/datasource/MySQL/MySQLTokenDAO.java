@@ -21,12 +21,12 @@ public class MySQLTokenDAO implements ITokenDAO {
 
     @Override
     public Token read(String tokenString) throws EntityNotFoundException {
+        Token t = null;
         try {
             Connection conn = connection.getConnection();
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Token_Owner WHERE Token = ?");
             stmt.setString(1, tokenString);
             ResultSet rs = stmt.executeQuery();
-            Token t = null;
             while(rs.next()) {
                 t = new Token(rs.getString(1), rs.getString(2));
             }
@@ -34,11 +34,10 @@ public class MySQLTokenDAO implements ITokenDAO {
             if (t == null) {
                 throw new EntityNotFoundException(Token.class);
             }
-            return t;
         } catch (SQLException e) {
             LOGGER.warning(e.getMessage());
-            return null;
         }
+        return t;
     }
 
     @Override
