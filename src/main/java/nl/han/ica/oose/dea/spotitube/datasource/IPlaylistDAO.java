@@ -2,14 +2,15 @@ package nl.han.ica.oose.dea.spotitube.datasource;
 
 import nl.han.ica.oose.dea.spotitube.domain.Playlist;
 import nl.han.ica.oose.dea.spotitube.domain.Track;
+import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 
 import java.util.List;
 
 public interface IPlaylistDAO {
 
-    List<Playlist> getAllPlaylists(String token);
+    List<Playlist> getAllPlaylists(String token) throws EntityNotFoundException;
 
-    void add(Playlist playlist, String token);
+    void add(Playlist playlist, String token) throws EntityNotFoundException;
 
     void delete(int id);
 

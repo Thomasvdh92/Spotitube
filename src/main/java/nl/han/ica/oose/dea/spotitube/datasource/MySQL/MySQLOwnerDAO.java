@@ -2,6 +2,7 @@ package nl.han.ica.oose.dea.spotitube.datasource.MySQL;
 
 import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
 import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
@@ -17,7 +18,7 @@ public class MySQLOwnerDAO implements IOwnerDAO {
     private IMySQLConnection connection;
 
     @Override
-    public Owner read(String Username) {
+    public Owner read(String Username) throws EntityNotFoundException {
         try {
             Connection conn = connection.getConnection();
             String query = "SELECT * FROM Owner WHERE Username = ?";
@@ -25,12 +26,11 @@ public class MySQLOwnerDAO implements IOwnerDAO {
             stmt.setString(1, Username);
             return getOwner(conn, stmt);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new EntityNotFoundException(Owner.class);
         }
-        return null;
     }
 
-    public Owner read(int id) {
+    public Owner read(int id) throws EntityNotFoundException {
         try {
             Connection conn = connection.getConnection();
             String query = "SELECT * FROM Owner WHERE OwnerID = ?";
@@ -39,13 +39,12 @@ public class MySQLOwnerDAO implements IOwnerDAO {
             return getOwner(conn, stmt);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new EntityNotFoundException(Owner.class);
         }
-        return null;
     }
 
     @Override
-    public Owner getOwnerByTokenString(String tokenString) {
+    public Owner getOwnerByTokenString(String tokenString) throws EntityNotFoundException {
 
         try {
             Connection conn = connection.getConnection();
@@ -54,19 +53,21 @@ public class MySQLOwnerDAO implements IOwnerDAO {
             stmt.setString(1, tokenString);
             return getOwner(conn, stmt);
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (EntityNotFoundException | SQLException e) {
+            throw new EntityNotFoundException(Owner.class);
         }
-        return null;
     }
 
-    private Owner getOwner(Connection conn, PreparedStatement stmt) throws SQLException {
+    private Owner getOwner(Connection conn, PreparedStatement stmt) throws SQLException, EntityNotFoundException {
         ResultSet rs = stmt.executeQuery();
-        Owner Owner = null;
+        Owner owner = null;
         while (rs.next()) {
-            Owner = new Owner(rs.getInt(1), rs.getString(2), rs.getString(3));
+            owner = new Owner(rs.getInt(1), rs.getString(2), rs.getString(3));
         }
         conn.close();
-        return Owner;
+        if (owner == null) {
+            throw new EntityNotFoundException(Owner.class);
+        }
+        return owner;
     }
 }

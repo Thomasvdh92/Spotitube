@@ -7,6 +7,7 @@ import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
 import nl.han.ica.oose.dea.spotitube.domain.Playlist;
 import nl.han.ica.oose.dea.spotitube.domain.Track;
 import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
@@ -16,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Default
 public class MySQLPlaylistDAO implements IPlaylistDAO {
@@ -29,6 +31,8 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     @Inject
     private IOwnerDAO ownerDAO;
 
+    private final static Logger LOGGER = Logger.getLogger("Logger");
+
     @Inject
     public MySQLPlaylistDAO(ITrackDAO trackDAO, IOwnerDAO ownerDAO) {
         this.trackDAO = trackDAO;
@@ -36,7 +40,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     }
 
     @Override
-    public List<Playlist> getAllPlaylists(String token) {
+    public List<Playlist> getAllPlaylists(String token) throws EntityNotFoundException {
         List<Playlist> playlists = new ArrayList<>();
         try {
             Connection conn = connection.getConnection();
@@ -55,14 +59,14 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             }
             return playlists;
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException | EntityNotFoundException e) {
+            // The method "getOwnerByTokenString" throws an EntityNotFoundException if it fails
+            throw new EntityNotFoundException(Playlist.class);
         }
-        return null;
     }
 
     @Override
-    public void add(Playlist playlist, String token) {
+    public void add(Playlist playlist, String token) throws EntityNotFoundException {
         try {
             Connection conn = connection.getConnection();
             String query = "INSERT INTO Playlist (Name, Owner) VALUES (?, ?)";
@@ -72,8 +76,9 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.setInt(2, owner.getId());
             stmt.executeUpdate();
             conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException | EntityNotFoundException e) {
+            LOGGER.warning(e.getMessage());
+            throw new EntityNotFoundException(Playlist.class);
         }
     }
 
@@ -86,7 +91,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.executeUpdate();
             conn.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
     }
 
@@ -100,7 +105,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.executeUpdate();
             conn.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
     }
 
@@ -115,7 +120,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.executeUpdate();
             conn.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
     }
 
@@ -135,7 +140,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.setInt(2, playlistid);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
     }
 }

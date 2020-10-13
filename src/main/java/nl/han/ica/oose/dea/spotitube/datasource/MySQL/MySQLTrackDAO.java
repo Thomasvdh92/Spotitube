@@ -11,11 +11,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
-public class MySQLTrackDAO extends SQLException implements ITrackDAO  {
+public class MySQLTrackDAO implements ITrackDAO  {
 
     @Inject
     private IMySQLConnection connection;
+
+    private final static Logger LOGGER = Logger.getLogger("Logger");
 
     @Override
     public Tracks tracksForPlaylist(int forPlaylist) {
@@ -34,7 +37,7 @@ public class MySQLTrackDAO extends SQLException implements ITrackDAO  {
             conn.close();
             return new Tracks(tracks);
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
 
         return null;
@@ -59,7 +62,7 @@ public class MySQLTrackDAO extends SQLException implements ITrackDAO  {
             conn.close();
             return tracks;
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
         return null;
     }
@@ -67,7 +70,7 @@ public class MySQLTrackDAO extends SQLException implements ITrackDAO  {
     public Track generateTrackFromResultSet(ResultSet rs) throws SQLException {
         String description = rs.getString(8);
         if(description == null) description = "undefined";
-        Track t = new Track(
+        return new Track(
                 rs.getInt(1),
                 rs.getString(2),
                 rs.getString(3),
@@ -78,6 +81,5 @@ public class MySQLTrackDAO extends SQLException implements ITrackDAO  {
                 description,
                 rs.getBoolean(9)
         );
-        return t;
     }
 }
