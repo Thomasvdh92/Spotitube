@@ -1,5 +1,6 @@
 package nl.han.ica.oose.dea.spotitube.services;
 
+import nl.han.ica.oose.dea.spotitube.annotations.TokenRequired;
 import nl.han.ica.oose.dea.spotitube.datasource.ITrackDAO;
 
 import javax.inject.Inject;
@@ -15,6 +16,7 @@ public class TrackService {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @TokenRequired
     public Response getTracksForPlaylist(
             @QueryParam("forPlaylist") int forPlaylist,
             @QueryParam("token") String token)  {

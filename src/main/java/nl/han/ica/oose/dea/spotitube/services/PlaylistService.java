@@ -1,10 +1,12 @@
 package nl.han.ica.oose.dea.spotitube.services;
 
+import nl.han.ica.oose.dea.spotitube.annotations.TokenRequired;
 import nl.han.ica.oose.dea.spotitube.datasource.IPlaylistDAO;
 import nl.han.ica.oose.dea.spotitube.datasource.ITrackDAO;
 import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
 import nl.han.ica.oose.dea.spotitube.domain.*;
 import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
+import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 import org.json.JSONObject;
 
 import javax.inject.Inject;
@@ -26,10 +28,8 @@ public class PlaylistService {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getPlaylists(@QueryParam("token") String token) throws ApplicationException {
-        if (token == null) {
-            throw new ApplicationException("A user token is required");
-        }
+    @TokenRequired
+    public Response getPlaylists(@QueryParam("token") String token) throws EntityNotFoundException {
         Playlists playlists = new Playlists(playlistDAO.getAllPlaylists(token));
         playlists.calculateLength();
         return Response.status(Response.Status.OK).entity(playlists).build();
@@ -37,7 +37,8 @@ public class PlaylistService {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addPlaylist(String body, @QueryParam("token") String token) {
+    @TokenRequired
+    public Response addPlaylist(String body, @QueryParam("token") String token) throws EntityNotFoundException {
         JSONObject json = new JSONObject(body);
         String name = json.getString("name");
         Owner owner = OwnerDAO.getOwnerByTokenString(token);
@@ -48,14 +49,16 @@ public class PlaylistService {
 
     @DELETE
     @Path("/{id}")
-    public Response delete(@PathParam("id") int id, @QueryParam("token") String token) throws ApplicationException {
+    @TokenRequired
+    public Response delete(@PathParam("id") int id, @QueryParam("token") String token) throws EntityNotFoundException {
         playlistDAO.delete(id);
         return getPlaylists(token);
     }
 
     @PUT
     @Path("/{id}")
-    public Response put(String body, @PathParam("id") int id, @QueryParam("token") String token) throws ApplicationException {
+    @TokenRequired
+    public Response put(String body, @PathParam("id") int id, @QueryParam("token") String token) throws EntityNotFoundException {
         JSONObject json = new JSONObject(body);
         String name = json.getString("name");
         Owner owner = OwnerDAO.getOwnerByTokenString(token);
@@ -67,7 +70,8 @@ public class PlaylistService {
     @DELETE
     @Path("/{id}/tracks/{tid}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response removeTrackFromPlaylist(@PathParam("id") Integer id, @PathParam("tid") Integer trackid, @QueryParam("token") String token) throws ApplicationException {
+    @TokenRequired
+    public Response removeTrackFromPlaylist(@PathParam("id") Integer id, @PathParam("tid") Integer trackid, @QueryParam("token") String token) throws EntityNotFoundException {
         playlistDAO.removeTrackFromPlaylist(id, trackid);
         return getPlaylists(token);
     }
@@ -75,6 +79,7 @@ public class PlaylistService {
     @GET
     @Path("/{id}/tracks")
     @Produces(MediaType.APPLICATION_JSON)
+    @TokenRequired
     public Response getTracksByPlaylist(@PathParam("id") Integer id) {
         Tracks tracks = new Tracks(trackDAO.tracksByPlaylistId(id));
         return Response.ok(tracks).build();
@@ -84,7 +89,8 @@ public class PlaylistService {
     @Path("/{id}/tracks")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addTrackToPlaylist(@PathParam("id") Integer id, String body, @QueryParam("token") String token) {
+    @TokenRequired
+    public Response addTrackToPlaylist(@PathParam("id") Integer id, String body, @QueryParam("token") String token) throws EntityNotFoundException {
         JSONObject json = new JSONObject(body);
         int trackid = json.getInt("id");
         String title = json.getString("title");
