@@ -13,13 +13,13 @@ public class Token {
     }
 
     public Token(String user) {
-        this.token = GenerateToken(user);
+        this.token = GenerateToken();
         this.user = user;
     }
 
     public Token(){}
 
-    public String GenerateToken(String user) {
+    public String GenerateToken() {
         Random rand = new Random();
         StringBuilder tokenString = new StringBuilder();
         // Generate a random string used for the token
