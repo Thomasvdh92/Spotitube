@@ -68,7 +68,6 @@ public class TestLoginService {
     public void testCatchException() throws EntityNotFoundException {
         when(OwnerDAO.read(owner.getUser())).thenThrow(EntityNotFoundException.class);
         ApplicationException e = assertThrows(ApplicationException.class, () -> loginService.login(owner));
-        System.out.println(e);
         assert e.getMessage().equals("Invalid credentials");
         assert e.getStatus().getStatusCode() == 401;
     }

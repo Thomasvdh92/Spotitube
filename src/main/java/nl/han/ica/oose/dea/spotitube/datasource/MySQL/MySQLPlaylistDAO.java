@@ -51,7 +51,6 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
                 List<Track> tracks = trackDAO.tracksByPlaylistId(rs.getInt(1));
                 boolean isOwner = false;
                 Owner currentOwner = ownerDAO.getOwnerByTokenString(token);
-                System.out.println();
                 if(currentOwner.getId() == rs.getInt(3)) {
                     isOwner = true;
                 }
