@@ -30,19 +30,6 @@ public class MySQLOwnerDAO implements IOwnerDAO {
         }
     }
 
-    public Owner read(int id) throws EntityNotFoundException {
-        try {
-            Connection conn = connection.getConnection();
-            String query = "SELECT * FROM Owner WHERE OwnerID = ?";
-            PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, id);
-            return getOwner(conn, stmt);
-
-        } catch (SQLException e) {
-            throw new EntityNotFoundException(Owner.class);
-        }
-    }
-
     @Override
     public Owner getOwnerByTokenString(String tokenString) throws EntityNotFoundException {
 

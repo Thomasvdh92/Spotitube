@@ -49,13 +49,6 @@ public class TestOwnerDAO {
     }
 
     @Test
-    public void testReadId() throws EntityNotFoundException {
-        Owner owner = OwnerDAO.read(1);
-        assert owner.getUser().equals("user");
-        assert owner.getPassword().equals("password");
-    }
-
-    @Test
     public void testGetUserByToken() throws EntityNotFoundException {
         Owner owner = OwnerDAO.getOwnerByTokenString("1234-1234-1234");
         assert owner.getUser().equals("user");
@@ -65,8 +58,6 @@ public class TestOwnerDAO {
     @Test
     public void testExceptions() {
         Exception e = assertThrows(EntityNotFoundException.class, () -> OwnerDAO.read("wrong_username"));
-        assert e.getMessage().equals(String.format("Entity %s not found", Owner.class.getName()));
-        e = assertThrows(EntityNotFoundException.class, () -> OwnerDAO.read(123));
         assert e.getMessage().equals(String.format("Entity %s not found", Owner.class.getName()));
         e = assertThrows(EntityNotFoundException.class, () -> OwnerDAO.getOwnerByTokenString("wrong_token_string-123"));
         assert e.getMessage().equals(String.format("Entity %s not found", Owner.class.getName()));
