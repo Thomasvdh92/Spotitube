@@ -38,11 +38,8 @@ public class PlaylistService {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
-    public Response addPlaylist(String body, @QueryParam("token") String token) throws ApplicationException, EntityNotFoundException {
-        JSONObject json = new JSONObject(body);
-        String name = json.getString("name");
-        Owner owner = OwnerDAO.getOwnerByTokenString(token);
-        playlistDAO.add(new Playlist(-1, name, owner, null), token);
+    public Response addPlaylist(Playlist playlist, @QueryParam("token") String token) throws ApplicationException, EntityNotFoundException {
+        playlistDAO.add(new Playlist(-1, playlist.getName(), playlist.isOwner(), null), token);
         return Response.status(Response.Status.CREATED).entity(new Playlists(playlistDAO.getAllPlaylists(token))).build();
     }
 
@@ -58,11 +55,7 @@ public class PlaylistService {
     @PUT
     @Path("/{id}")
     @TokenRequired
-    public Response put(String body, @PathParam("id") int id, @QueryParam("token") String token) throws ApplicationException, EntityNotFoundException {
-        JSONObject json = new JSONObject(body);
-        String name = json.getString("name");
-        Owner owner = OwnerDAO.getOwnerByTokenString(token);
-        Playlist playlist = new Playlist(id, name, owner, null);
+    public Response put(Playlist playlist, @PathParam("id") int id, @QueryParam("token") String token) throws ApplicationException, EntityNotFoundException {
         playlistDAO.put(playlist);
         return getPlaylists(token);
     }
@@ -90,17 +83,8 @@ public class PlaylistService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
-    public Response addTrackToPlaylist(@PathParam("id") Integer id, String body, @QueryParam("token") String token) throws ApplicationException {
-        JSONObject json = new JSONObject(body);
-        int trackid = json.getInt("id");
-        String title = json.getString("title");
-        String performer = json.getString("performer");
-        int duration = json.getInt("duration");
-        Boolean offline = json.getBoolean("offlineAvailable");
-
-        Track track = new Track(trackid, title, performer, duration, offline);
-
-        playlistDAO.addTrackToPlaylist(id, track, offline);
+    public Response addTrackToPlaylist(@PathParam("id") Integer id, Track track, @QueryParam("token") String token) throws ApplicationException {
+        playlistDAO.addTrackToPlaylist(id, track);
         return Response.status(Response.Status.CREATED).entity(new Playlists(playlistDAO.getAllPlaylists(token))).build();
 
     }

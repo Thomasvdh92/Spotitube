@@ -19,5 +19,5 @@ public interface IPlaylistDAO {
 
     void removeTrackFromPlaylist(Integer id, Integer trackid);
 
-    void addTrackToPlaylist(int playlistid, Track track, Boolean OfflineAvailable);
+    void addTrackToPlaylist(int playlistid, Track track);
 }

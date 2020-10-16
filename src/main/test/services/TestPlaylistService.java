@@ -64,8 +64,7 @@ public class TestPlaylistService {
     @Test
     public void testAddPlaylist() throws EntityNotFoundException, ApplicationException {
         Mockito.doNothing().when(playlistDAO).add(p, token.getToken());
-        String body = "{'name':'new-playlist'}";
-        Response r = playlistService.addPlaylist(body, token.getToken());
+        Response r = playlistService.addPlaylist(p, token.getToken());
         assert r.getStatus() == 201;
     }
 
@@ -79,8 +78,7 @@ public class TestPlaylistService {
     @Test
     public void testPut() throws EntityNotFoundException, ApplicationException {
         Mockito.doNothing().when(playlistDAO).put(p);
-        String body = "{'name':'new-playlist'}";
-        Response r = playlistService.put(body, 1, token.getToken());
+        Response r = playlistService.put(p, 1, token.getToken());
         assert r.getStatus() == 200;
     }
 
@@ -100,20 +98,9 @@ public class TestPlaylistService {
 
     @Test
     public void testAddTrackToPlaylist() throws ApplicationException {
-        Track t = new Track();
-        String body = "{\n" +
-                "  \"id\": 4,\n" +
-                "  \"title\": \"So Long, Marianne\",\n" +
-                "  \"performer\": \"Leonard Cohen\",\n" +
-                "  \"duration\": 546,\n" +
-                "  \"album\": \"Songs of Leonard Cohen\",\n" +
-                "  \"playcount\": 95,\n" +
-                "  \"publicationDate\": undefined,\n" +
-                "  \"description\": undefined,\n" +
-                "  \"offlineAvailable\": false\n" +
-                "}";
-        Mockito.doNothing().when(playlistDAO).addTrackToPlaylist(1, t, true);
-        Response r = playlistService.addTrackToPlaylist(1, body, token.getToken());
+        Track t = new Track(123, "title", "performer", 1, "album", 0, "1-1-2000", "description", false);
+        Mockito.doNothing().when(playlistDAO).addTrackToPlaylist(1, t);
+        Response r = playlistService.addTrackToPlaylist(1, t, token.getToken());
         assert r.getStatus() == 201;
     }
 

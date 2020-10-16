@@ -39,4 +39,15 @@ public class TestTrack {
         assert tracks.getTracks() == list;
     }
 
+    @Test
+    public void testTrackConstructor() {
+        t = new Track(1, "title", "performer", 1, true);
+        assert t.getId() == 1;
+        assert t.getTitle().equals("title");
+        assert t.getPerformer().equals("performer");
+        assert t.getDuration() == 1;
+        assert t.getOfflineAvailable();
+
+        t = new Track();
+    }
 }

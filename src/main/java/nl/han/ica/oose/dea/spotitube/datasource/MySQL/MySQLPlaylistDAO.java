@@ -124,10 +124,10 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     }
 
     @Override
-    public void addTrackToPlaylist(int playlistid, Track track, Boolean offlineAvailable) {
+    public void addTrackToPlaylist(int playlistid, Track track) {
         try {
             Connection conn = connection.getConnection();
-            int bool = (offlineAvailable) ? 1 : 0;
+            int bool = (track.getOfflineAvailable()) ? 1 : 0;
             String query = "UPDATE Track SET offlineAvailable = ? WHERE TrackID = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setInt(1, bool);
@@ -138,6 +138,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.setInt(1, track.getId());
             stmt.setInt(2, playlistid);
             stmt.executeUpdate();
+            conn.close();
         } catch (SQLException e) {
             LOGGER.warning(e.getMessage());
         }
