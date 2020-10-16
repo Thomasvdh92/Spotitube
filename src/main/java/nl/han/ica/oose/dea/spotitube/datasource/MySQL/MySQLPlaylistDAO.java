@@ -7,10 +7,12 @@ import nl.han.ica.oose.dea.spotitube.datasource.IOwnerDAO;
 import nl.han.ica.oose.dea.spotitube.domain.Playlist;
 import nl.han.ica.oose.dea.spotitube.domain.Track;
 import nl.han.ica.oose.dea.spotitube.domain.Owner;
+import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
 import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
+import javax.ws.rs.core.Response;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,7 +42,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
     }
 
     @Override
-    public List<Playlist> getAllPlaylists(String token) throws EntityNotFoundException {
+    public List<Playlist> getAllPlaylists(String token) throws ApplicationException {
         List<Playlist> playlists = new ArrayList<>();
         try {
             Connection conn = connection.getConnection();
@@ -61,12 +63,12 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
 
         } catch (SQLException | EntityNotFoundException e) {
             // The method "getOwnerByTokenString" throws an EntityNotFoundException if it fails
-            throw new EntityNotFoundException(Playlist.class);
+            throw new ApplicationException(e.getMessage(), Response.Status.INTERNAL_SERVER_ERROR);
         }
     }
 
     @Override
-    public void add(Playlist playlist, String token) throws EntityNotFoundException {
+    public void add(Playlist playlist, String token) throws ApplicationException {
         try {
             Connection conn = connection.getConnection();
             String query = "INSERT INTO Playlist (Name, Owner) VALUES (?, ?)";
@@ -77,7 +79,7 @@ public class MySQLPlaylistDAO implements IPlaylistDAO {
             stmt.executeUpdate();
         } catch (SQLException | EntityNotFoundException e) {
             LOGGER.warning(e.getMessage());
-            throw new EntityNotFoundException(Playlist.class);
+            throw new ApplicationException(e.getMessage(), Response.Status.INTERNAL_SERVER_ERROR);
         }
     }
 

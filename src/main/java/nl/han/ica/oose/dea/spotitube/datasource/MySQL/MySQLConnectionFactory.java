@@ -1,9 +1,6 @@
 package nl.han.ica.oose.dea.spotitube.datasource.MySQL;
 
-import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
-
 import javax.enterprise.inject.Default;
-import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;

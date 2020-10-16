@@ -29,7 +29,7 @@ public class PlaylistService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
-    public Response getPlaylists(@QueryParam("token") String token) throws EntityNotFoundException {
+    public Response getPlaylists(@QueryParam("token") String token) throws ApplicationException {
         Playlists playlists = new Playlists(playlistDAO.getAllPlaylists(token));
         playlists.calculateLength();
         return Response.status(Response.Status.OK).entity(playlists).build();
@@ -38,7 +38,7 @@ public class PlaylistService {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
-    public Response addPlaylist(String body, @QueryParam("token") String token) throws EntityNotFoundException {
+    public Response addPlaylist(String body, @QueryParam("token") String token) throws ApplicationException, EntityNotFoundException {
         JSONObject json = new JSONObject(body);
         String name = json.getString("name");
         Owner owner = OwnerDAO.getOwnerByTokenString(token);
@@ -50,7 +50,7 @@ public class PlaylistService {
     @DELETE
     @Path("/{id}")
     @TokenRequired
-    public Response delete(@PathParam("id") int id, @QueryParam("token") String token) throws EntityNotFoundException {
+    public Response delete(@PathParam("id") int id, @QueryParam("token") String token) throws ApplicationException {
         playlistDAO.delete(id);
         return getPlaylists(token);
     }
@@ -58,7 +58,7 @@ public class PlaylistService {
     @PUT
     @Path("/{id}")
     @TokenRequired
-    public Response put(String body, @PathParam("id") int id, @QueryParam("token") String token) throws EntityNotFoundException {
+    public Response put(String body, @PathParam("id") int id, @QueryParam("token") String token) throws ApplicationException, EntityNotFoundException {
         JSONObject json = new JSONObject(body);
         String name = json.getString("name");
         Owner owner = OwnerDAO.getOwnerByTokenString(token);
@@ -71,7 +71,7 @@ public class PlaylistService {
     @Path("/{id}/tracks/{tid}")
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
-    public Response removeTrackFromPlaylist(@PathParam("id") Integer id, @PathParam("tid") Integer trackid, @QueryParam("token") String token) throws EntityNotFoundException {
+    public Response removeTrackFromPlaylist(@PathParam("id") Integer id, @PathParam("tid") Integer trackid, @QueryParam("token") String token) throws ApplicationException {
         playlistDAO.removeTrackFromPlaylist(id, trackid);
         return getPlaylists(token);
     }
@@ -90,7 +90,7 @@ public class PlaylistService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
-    public Response addTrackToPlaylist(@PathParam("id") Integer id, String body, @QueryParam("token") String token) throws EntityNotFoundException {
+    public Response addTrackToPlaylist(@PathParam("id") Integer id, String body, @QueryParam("token") String token) throws ApplicationException {
         JSONObject json = new JSONObject(body);
         int trackid = json.getInt("id");
         String title = json.getString("title");

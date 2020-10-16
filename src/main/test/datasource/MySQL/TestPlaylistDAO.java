@@ -11,6 +11,7 @@ import nl.han.ica.oose.dea.spotitube.datasource.MySQL.MySQLTrackDAO;
 import nl.han.ica.oose.dea.spotitube.domain.Owner;
 import nl.han.ica.oose.dea.spotitube.domain.Playlist;
 import nl.han.ica.oose.dea.spotitube.domain.Track;
+import nl.han.ica.oose.dea.spotitube.exceptions.ApplicationException;
 import nl.han.ica.oose.dea.spotitube.exceptions.EntityNotFoundException;
 import org.junit.After;
 import org.junit.Before;
@@ -64,21 +65,17 @@ public class TestPlaylistDAO {
     }
 
     @Test
-    public void testGetAllPlaylists() throws EntityNotFoundException {
+    public void testGetAllPlaylists() throws EntityNotFoundException, ApplicationException {
         List<Playlist> playlistList = playlistDAO.getAllPlaylists(token);
         assert playlistList.size() == 3;
 
         when(ownerDAO.getOwnerByTokenString(token)).thenReturn(owner);
         playlistList = playlistDAO.getAllPlaylists(token);
         assert playlistList.get(0).isOwner();
-
-        when(ownerDAO.getOwnerByTokenString(token)).thenThrow(EntityNotFoundException.class);
-        Exception e = assertThrows(EntityNotFoundException.class, () -> playlistDAO.getAllPlaylists(token));
-        assert e.getMessage().equals(String.format("Entity %s not found", Playlist.class.getName()));
     }
 
     @Test
-    public void testAddPlaylist() throws EntityNotFoundException {
+    public void testAddPlaylist() throws ApplicationException {
         List<Track> newList = new ArrayList<>();
         Playlist p = new Playlist(1, "New playlist", owner, newList);
         playlistDAO.add(p, token);
@@ -89,14 +86,14 @@ public class TestPlaylistDAO {
     }
 
     @Test
-    public void testDeletePlaylist() throws EntityNotFoundException {
+    public void testDeletePlaylist() throws ApplicationException {
         playlistDAO.delete(1);
         List<Playlist> playlistList = playlistDAO.getAllPlaylists(token);
         assert playlistList.size() == 2;
     }
 
     @Test
-    public void testPutPlaylist() throws EntityNotFoundException {
+    public void testPutPlaylist() throws ApplicationException {
         Playlist p = new Playlist(1, "new name", false, new ArrayList<>());
         playlistDAO.put(p);
         List<Playlist> playlistList = playlistDAO.getAllPlaylists(token);

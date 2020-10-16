@@ -56,13 +56,13 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testGetPlaylists() throws EntityNotFoundException {
+    public void testGetPlaylists() throws ApplicationException {
         Response r = playlistService.getPlaylists(token.getToken());
         assert r.getStatus() == 200;
     }
 
     @Test
-    public void testAddPlaylist() throws EntityNotFoundException {
+    public void testAddPlaylist() throws EntityNotFoundException, ApplicationException {
         Mockito.doNothing().when(playlistDAO).add(p, token.getToken());
         String body = "{'name':'new-playlist'}";
         Response r = playlistService.addPlaylist(body, token.getToken());
@@ -70,14 +70,14 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testDelete() throws EntityNotFoundException {
+    public void testDelete() throws ApplicationException {
         Mockito.doNothing().when(playlistDAO).delete(1);
         Response r = playlistService.delete(1, token.getToken());
         assert r.getStatus() == 200;
     }
 
     @Test
-    public void testPut() throws EntityNotFoundException {
+    public void testPut() throws EntityNotFoundException, ApplicationException {
         Mockito.doNothing().when(playlistDAO).put(p);
         String body = "{'name':'new-playlist'}";
         Response r = playlistService.put(body, 1, token.getToken());
@@ -85,7 +85,7 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testRemoveTrackFromPlaylist() throws EntityNotFoundException {
+    public void testRemoveTrackFromPlaylist() throws ApplicationException {
         Mockito.doNothing().when(playlistDAO).removeTrackFromPlaylist(1, 1);
         Response r = playlistService.removeTrackFromPlaylist(1, 1, token.getToken());
         assert r.getStatus() == 200;
@@ -99,7 +99,7 @@ public class TestPlaylistService {
     }
 
     @Test
-    public void testAddTrackToPlaylist() throws EntityNotFoundException {
+    public void testAddTrackToPlaylist() throws ApplicationException {
         Track t = new Track();
         String body = "{\n" +
                 "  \"id\": 4,\n" +
