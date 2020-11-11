@@ -23,9 +23,6 @@ public class PlaylistService {
     @Inject
     private ITrackDAO trackDAO;
 
-    @Inject
-    private IOwnerDAO OwnerDAO;
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @TokenRequired
